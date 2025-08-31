@@ -1,170 +1,109 @@
-# Selenium Insider Careers Test
+<div id="top">
 
-This project implements an end-to-end UI test for the Insider careers website using Selenium WebDriver with Page Object Model (POM) architecture.
+<!-- HEADER STYLE: CLASSIC -->
+<div align="center">
 
-## Project Overview
 
-The test automates the following flow:
-1. Opens Insider's main homepage
-2. Hovers over "Company" menu and clicks "Careers"
-3. Clicks "Find your dream job" button
-4. Applies filters: Location = "Istanbul, Turkey", Department = "Quality Assurance"
-5. Clicks "View Role" on the first job card
-6. Switches to the new tab and clicks "APPLY FOR THIS JOB"
+# SELENIUM_QA_TEST
 
-## Architecture
+<em>Automate with Confidence, Validate Every User Journey</em>
 
-- **Page Object Model (POM)**: Each page has its own class with locators and methods
-- **Explicit Waits**: Uses WebDriverWait for better stability
-- **WebDriverManager**: Automatic driver management
-- **TestNG**: Test framework with reporting capabilities
+<!-- BADGES -->
+<img src="https://img.shields.io/github/last-commit/onurcankalender/Selenium_QA_Test?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+<img src="https://img.shields.io/github/languages/top/onurcankalender/Selenium_QA_Test?style=flat&color=0080ff" alt="repo-top-language">
+<img src="https://img.shields.io/github/languages/count/onurcankalender/Selenium_QA_Test?style=flat&color=0080ff" alt="repo-language-count">
 
-## Project Structure
+<em>Built with the tools and technologies:</em>
 
-```
-selenium-insider-careers/
-├─ pom.xml                          # Maven dependencies
-├─ testng.xml                       # TestNG configuration
-├─ README.md                        # This file
-├─ src/
-│  ├─ main/java/
-│  │  └─ com/example/insider/
-│  │     ├─ core/                   # Core utilities
-│  │     │  ├─ DriverFactory.java   # WebDriver management
-│  │     │  ├─ BasePage.java        # Common page functionality
-│  │     │  └─ Waiter.java          # Explicit wait utilities
-│  │     └─ pages/                  # Page objects
-│  │        ├─ HomePage.java        # Main homepage
-│  │        ├─ CareersPage.java     # Careers page
-│  │        ├─ JobsPage.java        # Job listings page
-│  │        └─ JobDetailPage.java   # Job detail page
-│  └─ test/java/
-│     └─ com/example/insider/tests/
-│        └─ CareersE2ETest.java     # Main test class
-└─ artifacts/
-   └─ screenshots/                  # Screenshots on failure (auto-created)
-```
+<img src="https://img.shields.io/badge/Markdown-000000.svg?style=flat&logo=Markdown&logoColor=white" alt="Markdown">
+<img src="https://img.shields.io/badge/XML-005FAD.svg?style=flat&logo=XML&logoColor=white" alt="XML">
 
-## Prerequisites
+</div>
+<br>
 
-- Java 11 or higher
-- Maven 3.6 or higher
-- Chrome browser installed
+---
 
-## Setup Instructions
+## Table of Contents
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd Selenium_QA_Test
-   ```
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Testing](#testing)
 
-2. **Install dependencies**:
-   ```bash
-   mvn clean install
-   ```
+---
 
-3. **Test website accessibility first** (recommended):
-   ```bash
-   test-accessibility.bat
-   ```
-   Or:
-   ```bash
-   mvn test -Dtest=WebsiteAccessibilityTest
-   ```
+## Overview
 
-4. **Run the main test**:
-   ```bash
-   mvn test
-   ```
-   Or run a specific test:
-   ```bash
-   mvn test -Dtest=CareersE2ETest
-   ```
+Selenium_QA_Test is a powerful automation framework for comprehensive UI testing of web applications. It leverages Selenium WebDriver with a structured Page Object Model to ensure maintainability and clarity in test scripts. The tool emphasizes stability through explicit waits and assertions, enabling reliable validation of dynamic web pages and user flows. Built with TestNG, it orchestrates structured test execution, making regression testing efficient and scalable. Whether verifying navigation, filtering, or interaction with job listings, Selenium_QA_Test helps developers and QA teams deliver robust, high-quality web experiences.
+**Why Selenium_QA_Test?**
 
-## Key Features
+This project automates end-to-end web UI validation, reducing manual testing effort and increasing reliability. The core features include:
 
-### Navigation Constraints
-- Only the main homepage URL is loaded directly
-- All subsequent navigation is done via UI interactions (hover/click)
-- No deep-linking to internal pages
+- 🧪 **[Colorful] End-to-End Testing:** Validates complete user journeys from homepage navigation to application submission.
+- 🛠️ **[Colorful] Page Object Model:** Ensures maintainable and scalable test scripts aligned with web page structures.
+- ⏳ **[Colorful] Explicit Waits & Assertions:** Enhances test stability by synchronizing interactions with web element load states.
+- 🚦 **[Colorful] Structured Test Execution:** Uses TestNG to organize and run comprehensive test suites efficiently.
+- 🔧 **[Colorful] Utility & Driver Management:** Provides robust WebDriver handling and synchronization utilities for consistent automation.
 
-### Stability Features
-- Explicit waits for all element interactions
-- Hover actions using Actions API
-- Page load verification
-- Screenshot capture on test failure
+---
 
-### Assertions
-- Homepage loading verification
-- URL validation for careers page
-- Filter selection verification
-- Page element visibility checks
+## Getting Started
 
-## Test Flow Details
+### Prerequisites
 
-1. **Homepage Navigation**
-   - Loads `https://useinsider.com/`
-   - Verifies homepage elements are visible
+This project requires the following dependencies:
 
-2. **Company Menu Interaction**
-   - Hovers over "Company" menu item
-   - Clicks "Careers" when visible
-   - Verifies URL contains `/careers/`
+- **Programming Language:** unknown
+- **Package Manager:** Maven
 
-3. **Careers Page**
-   - Clicks "Find your dream job" button
-   - Waits for page transition
+### Installation
 
-4. **Job Filters**
-   - Selects "Istanbul, Turkey" in Location filter
-   - Selects "Quality Assurance" in Department filter
-   - Verifies filter selections are applied
+Build Selenium_QA_Test from the source and install dependencies:
 
-5. **Job Application**
-   - Clicks "View Role" on first job card
-   - Switches to new tab
-   - Clicks "APPLY FOR THIS JOB" button
+1. **Clone the repository:**
 
-## Screenshots
+    ```sh
+    ❯ git clone https://github.com/onurcankalender/Selenium_QA_Test
+    ```
 
-On test failure, screenshots are automatically saved to `./artifacts/screenshots/` with timestamps.
+2. **Navigate to the project directory:**
 
-## Troubleshooting
+    ```sh
+    ❯ cd Selenium_QA_Test
+    ```
 
-### Common Issues
+3. **Install the dependencies:**
 
-1. **Chrome Driver Issues**
-   - WebDriverManager automatically downloads the correct ChromeDriver version
-   - Ensure Chrome browser is installed and up to date
+**Using [maven](https://maven.apache.org/):**
 
-2. **Element Not Found**
-   - The test uses explicit waits, but website changes may require locator updates
-   - Check the console output for specific error messages
-
-3. **Test Timeout**
-   - Increase timeout values in `Waiter.java` if needed
-   - Check internet connection and website availability
-
-### Debug Mode
-
-To run with more verbose output:
-```bash
-mvn test -Dtest=CareersE2ETest -Dselenium.log.level=DEBUG
+```sh
+❯ mvn install
 ```
 
-## Contributing
+### Usage
 
-When modifying the test:
-1. Update locators if website structure changes
-2. Maintain the POM architecture
-3. Add appropriate assertions for new functionality
-4. Test thoroughly before committing
+Run the project with:
 
-## Dependencies
+**Using [maven](https://maven.apache.org/):**
 
-- **Selenium WebDriver**: 4.15.0
-- **TestNG**: 7.7.1
-- **WebDriverManager**: 5.6.2
-- **Maven**: 3.6+
-- **Java**: 11+
+```sh
+mvn exec:java
+```
+
+### Testing
+
+Selenium_qa_test uses the {__test_framework__} test framework. Run the test suite with:
+
+**Using [maven](https://maven.apache.org/):**
+
+```sh
+mvn test
+```
+
+---
+
+<div align="left"><a href="#top">⬆ Return</a></div>
+
+---
