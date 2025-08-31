@@ -47,7 +47,7 @@ Selenium_QA_Test is a comprehensive automation framework designed to facilitate 
 
 This project requires the following dependencies:
 
-- **Programming Language:** unknown
+- **Programming Language:** Java
 - **Package Manager:** Maven
 
 ### ⚙️ Installation
