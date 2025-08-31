@@ -41,7 +41,7 @@ public class CareersE2ETest {
     
     @Test
     public void testInsiderCareersFlow() {
-        // Step 1: Open main homepage
+        
         System.out.println("Step 1: Opening homepage...");
         homePage.goTo();
         System.out.println("Current URL: " + driver.getCurrentUrl());
@@ -51,7 +51,7 @@ public class CareersE2ETest {
         Assert.assertTrue(homepageLoaded, "Homepage should be loaded");
         System.out.println("Step 1 completed: Homepage loaded successfully");
         
-        // Step 2: Hover Company menu and click Careers
+        
         System.out.println("Step 2: Navigating to Careers page...");
         homePage.hoverCompanyMenu();
         System.out.println("Company menu hovered successfully");
@@ -60,8 +60,7 @@ public class CareersE2ETest {
         Assert.assertTrue(careersPage.isCareersPageLoaded(), "Careers page should be loaded");
         Assert.assertTrue(driver.getCurrentUrl().contains("/careers/"), "URL should contain /careers/");
         System.out.println("Step 2 completed: Careers page loaded successfully");
-        
-        // Step 3: Click "Find your dream job" button
+       
         System.out.println("Step 3: Clicking 'Find your dream job' button...");
         jobsPage = careersPage.clickFindDreamJob();
         System.out.println("Jobs page object created, verifying page loaded...");
@@ -69,10 +68,10 @@ public class CareersE2ETest {
         Assert.assertTrue(jobsPageLoaded, "Jobs page should be loaded");
         System.out.println("Step 3 completed: Jobs page loaded successfully");
         
-        // Step 4: Apply filters
+        
         System.out.println("Step 4: Applying filters...");
         
-        // Add a wait before applying filters
+       
         System.out.println("Waiting for filters to be ready...");
         try {
             Thread.sleep(3000);
@@ -86,7 +85,7 @@ public class CareersE2ETest {
         Assert.assertEquals(selectedLocation, "Istanbul, Turkiye", "Location filter should be set correctly");
         System.out.println("Location filter applied successfully");
         
-        // Add a wait between filters
+       
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -100,12 +99,11 @@ public class CareersE2ETest {
         System.out.println("Department filter applied successfully");
         System.out.println("Step 4 completed: Filters applied successfully");
         
-        // Step 5: Click "View Role" on first job card
+       
         System.out.println("Step 5: Clicking 'View Role' on first job card...");
         System.out.println("Current URL before clicking: " + driver.getCurrentUrl());
         System.out.println("Page title before clicking: " + driver.getTitle());
-        
-        // Add a longer wait to ensure page is fully loaded and allow manual inspection
+       
         System.out.println("Waiting 10 seconds for page to load completely...");
         try {
             Thread.sleep(10000);
@@ -113,7 +111,6 @@ public class CareersE2ETest {
             Thread.currentThread().interrupt();
         }
         
-        // Print some basic page info
         System.out.println("Page source length: " + driver.getPageSource().length());
         System.out.println("Number of links on page: " + driver.findElements(By.tagName("a")).size());
         System.out.println("Number of buttons on page: " + driver.findElements(By.tagName("button")).size());
@@ -123,7 +120,7 @@ public class CareersE2ETest {
         Assert.assertTrue(jobDetailPage.isJobDetailPageLoaded(), "Job detail page should be loaded");
         System.out.println("Step 5 completed: Job detail page loaded successfully");
         
-        // Step 6: Click "APPLY FOR THIS JOB" button
+        
         System.out.println("Step 6: Clicking 'APPLY FOR THIS JOB' button...");
         System.out.println("Current URL: " + driver.getCurrentUrl());
         System.out.println("Page title: " + driver.getTitle());
@@ -131,7 +128,7 @@ public class CareersE2ETest {
         jobDetailPage.clickApplyForThisJob();
         System.out.println("Step 6 completed: Apply button clicked successfully");
         
-        // Test completed successfully
+        
         System.out.println("Test completed successfully - Apply button clicked!");
     }
     
@@ -147,16 +144,16 @@ public class CareersE2ETest {
     
     private void takeScreenshot(String testName) {
         try {
-            // Create screenshots directory if it doesn't exist
+            
             Path screenshotsDir = Paths.get("./artifacts/screenshots/");
             Files.createDirectories(screenshotsDir);
             
-            // Generate timestamp
+            
             String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
             String fileName = testName + "_" + timestamp + ".png";
             Path screenshotPath = screenshotsDir.resolve(fileName);
             
-            // Take screenshot
+            
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             Files.copy(screenshot.toPath(), screenshotPath);
             

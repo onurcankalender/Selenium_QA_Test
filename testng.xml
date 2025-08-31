@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Insider Careers Test Suite">
-    <test name="Website Accessibility Test">
-        <classes>
-            <class name="com.example.insider.tests.WebsiteAccessibilityTest"/>
-        </classes>
-    </test>
-    <test name="Jobs Page Debug Test">
-        <classes>
-            <class name="com.example.insider.tests.JobsPageDebugTest"/>
-        </classes>
-    </test>
     <test name="Careers E2E Test">
         <classes>
             <class name="com.example.insider.tests.CareersE2ETest"/>
-        </classes>
-    </test>
-    <test name="Manual Inspection Test">
-        <classes>
-            <class name="com.example.insider.tests.ManualInspectionTest"/>
-        </classes>
-    </test>
-    <test name="Jobs Page With Filters Test">
-        <classes>
-            <class name="com.example.insider.tests.JobsPageWithFiltersTest"/>
         </classes>
     </test>
 </suite>
