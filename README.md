@@ -4,9 +4,10 @@
 <div align="center">
 
 
+
 # SELENIUM_QA_TEST
 
-<em>Automate with Confidence, Validate Every User Journey</em>
+<em>Automate with Confidence, Ensure Flawless User Journeys</em>
 
 <!-- BADGES -->
 <img src="https://img.shields.io/github/last-commit/onurcankalender/Selenium_QA_Test?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
@@ -23,42 +24,33 @@
 
 ---
 
-## Table of Contents
+## 📄 Table of Contents
 
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Testing](#testing)
-
----
-
-## Overview
-
-Selenium_QA_Test is a powerful automation framework for comprehensive UI testing of web applications. It leverages Selenium WebDriver with a structured Page Object Model to ensure maintainability and clarity in test scripts. The tool emphasizes stability through explicit waits and assertions, enabling reliable validation of dynamic web pages and user flows. Built with TestNG, it orchestrates structured test execution, making regression testing efficient and scalable. Whether verifying navigation, filtering, or interaction with job listings, Selenium_QA_Test helps developers and QA teams deliver robust, high-quality web experiences.
-**Why Selenium_QA_Test?**
-
-This project automates end-to-end web UI validation, reducing manual testing effort and increasing reliability. The core features include:
-
-- 🧪 **[Colorful] End-to-End Testing:** Validates complete user journeys from homepage navigation to application submission.
-- 🛠️ **[Colorful] Page Object Model:** Ensures maintainable and scalable test scripts aligned with web page structures.
-- ⏳ **[Colorful] Explicit Waits & Assertions:** Enhances test stability by synchronizing interactions with web element load states.
-- 🚦 **[Colorful] Structured Test Execution:** Uses TestNG to organize and run comprehensive test suites efficiently.
-- 🔧 **[Colorful] Utility & Driver Management:** Provides robust WebDriver handling and synchronization utilities for consistent automation.
+- [Overview](#-overview)
+- [Getting Started](#-getting-started)
+    - [Prerequisites](#-prerequisites)
+    - [Installation](#-installation)
+    - [Usage](#-usage)
+    - [Testing](#-testing)
 
 ---
 
-## Getting Started
+## ✨ Overview
 
-### Prerequisites
+Selenium_QA_Test is a comprehensive automation framework designed to facilitate reliable and maintainable UI testing for web applications. Built with Selenium WebDriver and following the Page Object Model, it automates complex user workflows, such as job application processes, with stability and clarity. The framework emphasizes explicit waits, minimal URL access, and clear assertions to ensure robust test execution. It also captures screenshots on failures for easier debugging. Centralized management of WebDriver instances and waits enhances reliability, while modular page objects promote maintainability. Ideal for teams seeking scalable, end-to-end testing solutions, Selenium_QA_Test streamlines quality assurance and regression testing across dynamic web environments.
+
+---
+
+## 🚀 Getting Started
+
+### 📋 Prerequisites
 
 This project requires the following dependencies:
 
 - **Programming Language:** unknown
 - **Package Manager:** Maven
 
-### Installation
+### ⚙️ Installation
 
 Build Selenium_QA_Test from the source and install dependencies:
 
@@ -82,7 +74,7 @@ Build Selenium_QA_Test from the source and install dependencies:
 ❯ mvn install
 ```
 
-### Usage
+### 💻 Usage
 
 Run the project with:
 
@@ -92,7 +84,7 @@ Run the project with:
 mvn exec:java
 ```
 
-### Testing
+### 🧪 Testing
 
 Selenium_qa_test uses the {__test_framework__} test framework. Run the test suite with:
 
